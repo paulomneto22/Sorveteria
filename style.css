@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ed5ff759;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.titulo{
+  text-align: center;
+  color: #ff69b4;
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+.produtos {
+  margin: 20px 0;
+}
+
+.carrinho {
+  background: #faf3de;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+.imgSorvete{
+    width: 250px;
+    display: flex;
+    margin: auto;
+}

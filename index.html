@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Sorveteria</title>
+</head>
+<body>
+    <div class="container">
+  <h1 class="titulo">Sorveteria do Neto 🍦</h1>
+  <img src="img/Sorvete.png" alt="sorvete" class="imgSorvete">
+
+  <div class="produtos">
+    <h3>Escolha o seu sorvete:</h3>
+    <label><input type="radio" name="produto" value="casquinhaMorango"> Casquinha de Morango🍓</label><br>
+    <label><input type="radio" name="produto" value="casquinhaChocolate"> Casquinha de Chocolate🍫</label><br>
+    <label><input type="radio" name="produto" value="casquinhaBaunilha"> Casquinha de Baunilha🍦</label><br>
+    <label><input type="radio" name="produto" value="milkshake"> Milkshake🥤</label><br>
+    <label><input type="radio" name="produto" value="sundae"> Sundae🍨</label><br>
+
+    <h3>Quantidade:</h3>
+    <input type="number" id="quantidade" min="1">
+    <br><br>
+    <button onclick="adicionar()">Adicionar</button>
+  </div>
+
+  <div class="carrinho">
+    <h3>Carrinho:</h3>
+    <p id="lista"></p>
+    <p id="total"></p>
+  </div>
+
+  <div id="pagamento">
+    
+  <p>Forma de pagamento:</p>
+ 
+            <label class="opcao">
+                <input type="radio" name="pagamento" value="1" onclick="mostrarParcelas()"> Dinheiro
+            </label>
+ 
+            <label class="opcao">
+                <input type="radio" name="pagamento" value="2" onclick="mostrarParcelas()"> Pix
+            </label>
+ 
+            <label class="opcao">
+                <input type="radio" name="pagamento" value="3" onclick="mostrarParcelas()"> Cartão Débito
+            </label>
+ 
+            <label class="opcao">
+                <input type="radio" name="pagamento" value="4" onclick="mostrarParcelas()"> Cartão Crédito
+            </label>
+ 
+ 
+            <div id="parcelasBox" style="display:none;">
+                <p>Parcelar (até 3x):</p>
+                <input type="number" id="parcelas" min="1" max="3">
+            </div>
+ 
+
+    <div id="detalhesPagamento"></div>
+
+    <br>
+    <button onclick="confirmarPagamento()">Confirmar Pagamento</button>
+    <button onclick="finalizar()">Finalizar Compra</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
