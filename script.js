@@ -102,15 +102,20 @@ function confirmarPagamento() {
             break;
 
         case "4":
-            let parcelas = document.getElementById("parcelas").value;
+    let parcelas = parseInt(document.getElementById("parcelas").value);
 
-            if (parcelas == "") {
-                parcelas = 1;
+        if (isNaN(parcelas) || parcelas < 1) {
+            parcelas = 1;
             }
 
-            mensagem = "Pagamento no Crédito em " + parcelas + "x 💳";
+        if (parcelas > 3) {
+            alert("Você só pode parcelar em até 3x!");
+            return;
+            }
+
+        mensagem = "Pagamento no Crédito em " + parcelas + "x 💳";
             break;
-    }
+            }
 
     document.getElementById("detalhesPagamento").innerHTML = mensagem;
 
